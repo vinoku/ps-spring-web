@@ -28,13 +28,13 @@ public class ConferenceConfig implements WebMvcConfigurer {
     }
 
     // This is another way of resolving views compared to configure it in application.yml
-    @Bean
-    public ViewResolver viewResolver() {
-        InternalResourceViewResolver resolver = new InternalResourceViewResolver();
-        resolver.setPrefix("/WEB-INF/jsp/");
-        resolver.setSuffix(".jsp");
-        return resolver;
-    }
+//    @Bean
+//    public ViewResolver viewResolver() {
+//        InternalResourceViewResolver resolver = new InternalResourceViewResolver();
+//        resolver.setPrefix("/WEB-INF/jsp/");
+//        resolver.setSuffix(".jsp");
+//        return resolver;
+//    }
 
     @Bean
     public LocaleResolver localeResolver() {

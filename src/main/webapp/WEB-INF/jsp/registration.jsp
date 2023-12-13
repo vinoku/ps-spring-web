@@ -5,10 +5,24 @@
 <html>
     <head>
         <title>Registration</title>
+        <style>
+            .error {
+                color: #ff0000;
+            }
+
+            .error-block {
+                color: #000;
+                background-color: #ffEEEE;
+                border: 3px solid #ff0000;
+                padding: 8px;
+                margin: 16px;
+            }
+        </style>
     </head>
     <body>
         <h1>Registration</h1>
         <form:form modelAttribute="registration">
+            <form:errors path="*" cssClass="error-block" element="div" />
             <table>
                 <tr>
                     <td>
@@ -16,6 +30,9 @@
                     </td>
                     <td>
                         <form:input path="name" />
+                    </td>
+                    <td>
+                        <form:errors path="name" cssClass="error" />
                     </td>
                 </tr>
                 <tr>
